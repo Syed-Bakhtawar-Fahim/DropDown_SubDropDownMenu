@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="style2.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+
+        <i class="fas fa-bars bar" id="menu-bar"></i>
+
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services
+                    <ul id="dropdown">
+                        <li>Marketing</li>
+                        <li >Design
+     
+                         <ul id="dropdown-second">
+                            <li>Web</li>
+                            <li>Graphics</li>
+                            <li>Interior</li>
+                         </ul>
+                        </li>
+                        <li>Marketing</li>
+                    </ul>
+                </li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+
+
+
+    <script>
+        let navbar = document.querySelector("#navbar")
+        let menu = document.querySelector("#menu-bar")
+        
+
+        window.onscroll = ()=>{
+            menu.classList.remove('fa-times')
+            // navbar.classList.remove('active')
+        }
+
+
+        menu.addEventListener('click',()=>{
+            menu.classList.toggle('fa-times')
+            navbar.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>

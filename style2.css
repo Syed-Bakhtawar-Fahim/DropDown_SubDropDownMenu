@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+}
+
+.main-container{
+    height: 85px;
+    background-color: #333333;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+
+#menu-bar{
+    display: none;
+    font-size: 3rem;
+    color: white;
+    margin: 1rem 3rem;
+}
+
+.logo{
+    /* margin: 2rem 3rem; */
+    margin: 1.5rem 7rem;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 1rem;
+    
+}
+
+.navbar ul li {
+    padding: .5rem 1.3rem;
+    list-style: none;
+    font-size: 1.5rem;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    /* margin: 0.5rem; */
+    
+}
+.navbar ul li ul {
+    display: block;
+    background-color: #333333;
+    margin-top: 1rem;
+    border-top: 2px solid rgb(197, 184, 184);
+}
+
+.navbar ul li:hover{
+    color: #008ECC;
+}
+
+.navbar ul li ul {
+    display: none;
+}
+.navbar ul li:hover > ul {
+    display: block;
+}
+
+.navbar ul ul ul{
+    margin-left: 145px;
+    top: 0;
+    position: absolute;
+}
+.icons{
+    margin: 2.5rem auto;
+    color: white;
+}
+.icons i {
+    font-size: 2rem;
+    margin: -.5rem 1rem;
+}
+.icons i:hover{
+    color: #008ECC;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* body{height: 300rem;} */
+
+@media (max-width:1214px) {
+    html{
+        font-size: 90%;
+    }
+
+    .navbar{
+        padding: 1rem;
+    }
+
+    .icons{
+        margin: 3rem auto;
+    }
+    .icons i{
+        margin:-6.5px 8px;
+    }
+}
+
+
+@media (max-width:1068px){
+
+    html{
+        font-size: 80%;
+    }
+
+
+
+}
+@media (max-width:952px) {
+    html{
+        font-size: 70%;
+    }
+}
+@media (max-width:858px) {
+    #menu-bar{
+        display: initial;
+        margin: 2rem;
+    }
+
+    .logo{
+        margin: 2rem -5rem;
+    }
+
+    .icons i {
+        padding: -1rem 3rem;
+    }
+    .main-container{
+        height: 500px;
+    }
+    .main-container .navbar{
+        position: absolute;
+        top: 0%; right: 0; left: 0;
+        background: #333;
+        border-top: .1rem solid rgba(255,255,255,.2);
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .main-container .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        display: block;
+        top: 0;
+        position: absolute;
+        padding: 1.5rem;
+        margin: 7.5rem 0;
+        height: 600px;
+    
+    
+    }
+
+
+    .main-container .navbar ul{
+        display: block;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background: #222;
+    }
+    .main-container .navbar ul ul{
+        display: none;
+        
+    }
+
+    .navbar ul li:hover > ul {
+        display: inline-block;
+        margin: 2rem 0;
+        position: absolute;
+        margin-left: 10px;
+        border: 1px solid #666 ;
+        color: black;
+    }
+   
+    .navbar ul ul ul{
+        margin-left: 145px;
+        top: 0;
+        position: absolute;
+    }
+
+    .navbar ul li:hover > ul > li{
+        margin: -15px;
+        font-size: 17px;
+    }
+    
+    
+}
+
+@media (max-width:466px){
+    .logo{
+        margin: 2rem 7rem;
+    }
+
+    .icons i {
+        font-size: 1.5rem;
+        margin: 0 3px;
+    }
+}
+@media (max-width:390px){
+    .logo{
+        margin: 2rem -1rem;
+
+    }
+
+    .icons i {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}
+@media (max-width:390px){
+
+
+    .icons i {
+       
+        margin: 0rem 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .navbar > #dropdown::after{
+        display: inline-block;
+        margin-left: 45px;
+    } */
+
+    /* #dropdown:hover{
+
+    }
+    #dropdown-second{
+        display: inline-block;
+        margin-left: 45px;
+    } */
+
+/* .main-container .navbar ul > li> ul > ul > li{
+    display: inline-block;
+    position: absolute;
+    margin-left: 10px;
+} */
+/* margin: 1rem 0;   */
